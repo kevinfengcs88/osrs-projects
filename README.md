@@ -28,4 +28,14 @@ a fully functional [Zulrah GUI](https://github.com/kevinfengcs88/osrs-projects/b
 ## sheets.py
 Old School RuneScape has its own player-driven economy. Players gather resources, such as fish, logs, potions, weapons, etc. and sell them on the 
 [Grand Exchange](https://oldschool.runescape.wiki/w/Grand_Exchange) to other players who pay with coins, the in-game currency. Prices fluctuate just as they do in
-the real world economy: As a resource becomes more scarce (supply is low), players have to pay more coins for it, and the opposite is also true. 
+the real world economy: As a resource becomes more scarce (supply is low), players have to pay more coins for it, and the opposite is also true. Tools that check
+current prices and have records of previous prices, like [GE Tracker](https://www.ge-tracker.com/), are very useful for deciding on whether or not an investment
+should be made. These sites can also have data on buying volume, ROI margins, and gaps between selling and buying offers. This information has been very handy
+for me when I need to decide whether it's worth it to sink a few million coins into (a) certain item(s), but checking specific item pages over and over isn't
+the easiest process. On top of that, it's up to me to recall the previous price of an item to get any instant information from it; that is, if I see the price
+of an [air orb](https://www.ge-tracker.com/item/air-orb) to be 1500, and I don't remember both *when* I checked last and *what* the price was when I did, then
+I don't immediately figure out if I missed out on a better investment opportunity or if I was correct to wait. Of course, I can check the price history with the graphs
+that GE Tracker has, but it's not like the graph is going to tell me if the price went up or down since I last checked if I can't remember those prior details.
+To make thing a little bit easier, I developed an automatic web scraping script that obtains the prices of items I'm interested in purchasing, logs those
+to a spreadsheet, stores the previous price and the newest price, and performs calculations on that data to tell me whether or not the price went up or down
+since the last iteration with a simple **YES** or **NO**.
